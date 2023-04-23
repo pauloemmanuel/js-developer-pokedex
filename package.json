@@ -1,0 +1,20 @@
+{
+  "name": "pokedex-javascript",
+  "version": "1.0.0",
+  "description": "Pokedex feita com HTML,CSS e JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauloemmanuel/pokedex-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pauloemmanuel/pokedex-javascript/issues"
+  },
+  "homepage": "https://github.com/pauloemmanuel/pokedex-javascript#readme"
+}

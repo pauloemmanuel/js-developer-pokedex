@@ -1,24 +1,94 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
-body {
-    background-color: #f6f8fc;
+:root {
+  --pokemon-type-normal-color: #A6A877;
+  --pokemon-type-grass-color: #77c850;
+  --pokemon-type-fire-color: #ee7f30;
+  --pokemon-type-water-color: #678fee;
+  --pokemon-type-electric-color: #f7cf2e;
+  --pokemon-type-ice-color: #98d5d7;
+  --pokemon-type-ground-color: #dfbf69;
+  --pokemon-type-flying-color: #a98ff0;
+  --pokemon-type-poison-color: #a040a0;
+  --pokemon-type-fighting-color: #bf3029;
+  --pokemon-type-psychic-color: #f65687;
+  --pokemon-type-dark-color: #725847;
+  --pokemon-type-rock-color: #b8a137;
+  --pokemon-type-bug-color: #a8b720;
+  --pokemon-type-ghost-color: #6e5896;
+  --pokemon-type-steel-color: #b9b7cf;
+  --pokemon-type-dragon-color: #6f38f6;
+  --pokemon-type-fairy-color: #f9aec7;
+}
+  
+
+body{
+  background-color: aliceblue;
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+  padding: 1rem;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  height: fit-content;
+  min-height: 100vh;
 }
 
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+@media screen and (min-width: 992px){
+  .content{
+    max-width: 992px;
+    margin: 0 auto;
+  }
 }
+
+.content h1{
+  margin:0;
+}
+
+
+
+.background-green{
+  background-color:#49d0b0;
+  color: whitesmoke;
+}
+.background-red{
+  background-color: #a01d14;
+}
+
+.pokemon-number{
+  text-align: right;
+  color:black;
+  opacity: 0.3;
+  font-weight: 700;
+  font-size: 0.625rem;
+}
+
+.pokemon-title{
+  margin-bottom: 0;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding:1.5rem 0rem;
+}
+
+#loadMoreButton{
+  border-radius: 1rem;
+  border: none;
+  color: whitesmoke;
+  background-color: #6c79db;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+
