@@ -1,7 +1,5 @@
 import { Pokemon as PokemonModel } from './Models/pokemon-model.js';
 
-let offset = 0;
-let limit = 10;
 
 const typesColorIndex = {
   normal: '#A6A877',
@@ -33,19 +31,24 @@ function takeTypesToHtml(tipos){
 export function convertePokemonToHtml(pokemon) {
   const types = takeTypesToHtml(pokemon.types)
   return `
-          <li class="pokemon-list__item pokemon-type-${pokemon.type}">
-            <span class="pokemon-number">#${pokemon.id}</span>
-            <span class="pokemon-title">${pokemon.name}</span>
-
-            <div class="pokemon-list__item--details">
-              <ol class="pokemon-list__types">
-                ${types}
-              </ol>
-              <div class="img-container">
-              <img src="${pokemon.photo}" alt="${pokemon.name}">
-              </div>
-            </div>
-          </li>
+  <li class="pokemon-list__item pokemon-border-${pokemon.type}">
+          <div class="pokemon-list__info--container ">       
+            <span class="pokemon-list__info--number-container pokemon-number">#${pokemon.id}</span>
+            <div class="pokemon-list__info--title-container pokemon-title">${pokemon.name}</div>
+          </div>
+        <div class="pokemon-list__img-container">
+        
+        <img src="${pokemon.photo}" alt="${pokemon.name}">
+        </div>
+        <div class="pokemon-list__info pokemon-border-${pokemon.type} ">
+          
+          <div class="pokemon-list__item--details ">
+            <ol class="pokemon-list__types">
+              ${types}
+            </ol>
+          </div>
+        </div>
+      </li>
           `
 }
 

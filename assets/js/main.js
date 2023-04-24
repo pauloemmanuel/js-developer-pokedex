@@ -1,7 +1,7 @@
 import { convertePokemonToHtml, solicitaPokemons } from './poke-api.js';
 
 let offset = 0;
-const limit = 10;
+const limit = 5;
 const maxRecords = 151;
 const listaPokemon = document.querySelector('#pokemon-list');
 const loadMoreButton = document.getElementById('loadMoreButton');
@@ -21,8 +21,12 @@ loadMoreButton.addEventListener('click', () => {
   const qtdRecord = offset + limit;
   if (qtdRecord >= maxRecords) {
     const newLmit = maxRecords - (qtdRecord - limit);
-    loadPokemons(offset, newLmit)
     loadMoreButton.style.display = 'none'
+
+    if(newLmit <= 0){
+      return
+    }
+    loadPokemons(offset, newLmit)
     return
   }
   loadPokemons(offset, limit)
