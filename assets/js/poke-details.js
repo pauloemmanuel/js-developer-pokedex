@@ -1,4 +1,8 @@
+import { pegaPokemonComDetalhes } from './poke-api.js';
+import {Pokemon as PokemonModel} from './Models/pokemon-model.js';
 console.log('Script funciona!')
+
+const url_base = 'https://pokeapi.co/api/v2/pokemon/$1';
 
 var query = location.search.slice(1);
 var partes = query.split('&');
@@ -10,4 +14,13 @@ partes.forEach(function (parte) {
     data[chave] = valor;
 });
 
-console.log(data); 
+const id_pokemon_buscado = data.pokemon_id;
+
+(async ()=>{
+    console.log(await pegaPokemonComDetalhes(retornaUrlPokemonEspecifico()))
+})()
+
+
+function retornaUrlPokemonEspecifico(){
+    return url_base.replace('$1',id_pokemon_buscado);
+}

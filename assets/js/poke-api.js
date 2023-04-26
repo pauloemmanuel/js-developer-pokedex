@@ -90,3 +90,4 @@ function convertPokeApiToPokemonModel(pokeApiDetails){
   pokemon.type = pokemon.types.at(0);
   return pokemon
 }
+
