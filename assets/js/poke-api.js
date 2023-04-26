@@ -31,6 +31,7 @@ function takeTypesToHtml(tipos){
 export function convertePokemonToHtml(pokemon) {
   const types = takeTypesToHtml(pokemon.types)
   return `
+  <a class='pokemon-list__link' href="/pages/pokemom-detail?pokemon_id=${pokemon.id}">
   <li class="pokemon-list__item pokemon-border-${pokemon.type}">
           <div class="pokemon-list__info--container ">       
             <span class="pokemon-list__info--number-container pokemon-number">#${pokemon.id}</span>
@@ -49,6 +50,7 @@ export function convertePokemonToHtml(pokemon) {
           </div>
         </div>
       </li>
+    </a>
           `
 }
 

@@ -34,6 +34,10 @@
   border-width: 1px;
   box-shadow: 0px 0px 3px 1px #999;
   border-style: solid;
+  overflow: hidden;
+  -moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .pokemon-list__item--details{
   margin-bottom: 0.5rem;
@@ -102,6 +106,18 @@
 
 .pokemon-list__item:hover{
   cursor: pointer;
+  -moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
+.pokemon-list__item:hover .pokemon-list__item:not(:hover){
+  -moz-transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
 
+.pokemon-list__link{
+  text-decoration: none;
+
+}
