@@ -78,7 +78,7 @@
 .pokemon-list__img-container img{
   width: 100%;
   max-width: 100%;
-  height: 75px;
+  height: 110px;
   padding: 0.25rem;
   object-fit: contain;
 }

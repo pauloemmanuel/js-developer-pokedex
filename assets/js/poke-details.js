@@ -17,10 +17,16 @@ partes.forEach(function (parte) {
 const id_pokemon_buscado = data.pokemon_id;
 
 (async ()=>{
-    console.log(await pegaPokemonComDetalhes(retornaUrlPokemonEspecifico()))
+    const pokemon = await pegaPokemonComDetalhes(retornaUrlPokemonEspecifico());
+    setaDadosPokemonNaTela(pokemon);
+    console.log(pokemon)
 })()
 
 
 function retornaUrlPokemonEspecifico(){
     return url_base.replace('$1',id_pokemon_buscado);
+}
+
+function setaDadosPokemonNaTela(pokemon){
+    
 }

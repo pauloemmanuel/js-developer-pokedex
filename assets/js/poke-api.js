@@ -84,7 +84,7 @@ function convertPokeApiToPokemonModel(pokeApiDetails){
   const pokemon = new PokemonModel();
   pokemon.name = pokeApiDetails.name;
   pokemon.id = pokeApiDetails.id;
-  pokemon.photo = pokeApiDetails.sprites.other.dream_world.front_default;
+  pokemon.photo = pokeApiDetails.sprites.other['official-artwork'].front_default;
   console.log(pokeApiDetails)
   pokemon.types = pokeApiDetails.types.map(type => type.type.name);
   pokemon.type = pokemon.types.at(0);
