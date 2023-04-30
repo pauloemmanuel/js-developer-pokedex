@@ -4,5 +4,10 @@ export class Pokemon{
   types = [];
   type;
   photo;
-
+  attributes = [];
+  basic_infos = {
+    height: '',
+    base_experience:'',
+    weight:''
+  };
 }

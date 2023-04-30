@@ -21,49 +21,84 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../assets/css/global.css">
   <link rel="stylesheet" href="../assets/css/poke-detail/main.css">
+  <link rel="stylesheet" href="../assets/css/animations/loadAnimation.css">
   
 </head>
 <body>
   <main class="content">
+    <div id="link-back" >
+      <a href="/">
+        <img src="../assets/img/icons/back-icon.svg"/> 
+      </a>
+    </div>    
     <div class="poke-details__container">
 
       <!--Informações principais-->
       <section class="principal-info__container">
-        <h1 class="poke-details__atributes-title">Detalhes do Pokemon</h1>
-        <img id='poke-image' alt="pokemon-principal-image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"/>
+        <h1 class="poke-details__title">Detalhes do Pokemon</h1>
+        <div class="c-loader" style="width:80px;height: 80px;" id="image-loader"></div>
+        <img id='poke-image' style="display:none" alt="pokemon-principal-image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"/>
         <h1 class="poke-details__title">Bulbassauro</h1>
-      </section>'
+      </section>
       <!--Informações Gerais-->
       <section class="poke-details__division-container">
         <h2 class="poke-details__division-title-text">Informações Gerais</h2>
+        <ul class="pokemon_details">
+          <li class="pokemon_details_atribute-item">
+            ID
+            <br>
+            <span id="pokemon-base-info-id-content"><div class="c-loader"></div></span>
+          </li>
+          <li class="pokemon_details_atribute-item">
+            NOME
+            <br>
+            <span id="pokemon-base-info-nome-content"><div class="c-loader"></div></span>
+          </li>
+          <li class="pokemon_details_atribute-item">
+            TIPO PRINCIPAL
+            <br>
+            <span id="pokemon-base-info-principal-type-content"><div class="c-loader"></div></span>
+          </li>
+          <li class="pokemon_details_atribute-item">
+            EXPERIÊNCIA BASE
+            <br>
+            <span id="pokemon-base-info-base-exp-content"><div class="c-loader"></div></span>
+          </li>
+          <li class="pokemon_details_atribute-item">
+            ALTURA
+            <br>
+            <span id="pokemon-base-info-height-content"><div class="c-loader"></div></span>
+          </li>
+          <li class="pokemon_details_atribute-item">
+            PESO
+            <br>
+            <span id="pokemon-base-info-weight-content"><div class="c-loader"></div></span>
+          </li>
+        </ul>
       </section>
       <!--Atributos-->
       <section class="poke-details__division-container">
         <h2 class="poke-details__division-title-text">Atributos</h2>
-        <ul id="atributos">
+        <ul class="pokemon_details" id="pokemon_atibutes-list">
           <li class="pokemon_details_atribute-item">
-            HP:<br>100
+            HP<br><div class="c-loader"></div>
           </li>
           <li class="pokemon_details_atribute-item">
-            SPECIAL DEFENSE:<br>100
+            ATTACK<br><div class="c-loader"></div>
           </li>
           <li class="pokemon_details_atribute-item">
-            HP:<br>100
+            DEFENSE<br><div class="c-loader"></div>
           </li>
           <li class="pokemon_details_atribute-item">
-            SPECIAL DEFENSE:<br>100
+            SPECIAL ATTACK:<br><div class="c-loader"></div>
           </li>
           <li class="pokemon_details_atribute-item">
-            HP:<br>100
+            SPECIAL DEFENSE:<br><div class="c-loader"></div>
           </li>
           <li class="pokemon_details_atribute-item">
-            SPECIAL DEFENSE:<br>100
+            SPEED:<br><div class="c-loader"></div>
           </li>
         </ul>
-      </section>
-      <!--Habilidades-->
-      <section class="poke-details__division-container">
-        <h2 class="poke-details__division-title-text">Habilidades</h2>
       </section>
 
     </div>

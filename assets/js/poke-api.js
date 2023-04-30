@@ -88,6 +88,18 @@ function convertPokeApiToPokemonModel(pokeApiDetails){
   console.log(pokeApiDetails)
   pokemon.types = pokeApiDetails.types.map(type => type.type.name);
   pokemon.type = pokemon.types.at(0);
-  return pokemon
+
+  pokemon.basic_infos.height = pokeApiDetails.height
+  pokemon.basic_infos.weight = pokeApiDetails.weight
+  pokemon.basic_infos.base_experience = pokeApiDetails.base_experience
+  
+  pokemon.attributes = pokeApiDetails.stats.map(stat => { 
+    return {'name': transformaNomeDeAtributoEmLabel(stat.stat.name),'value': stat.base_stat}
+  }) 
+  return pokemon;
 }
 
+function transformaNomeDeAtributoEmLabel(status_da_api){
+  return status_da_api.replace('-',' ').toUpperCase();
+
+}

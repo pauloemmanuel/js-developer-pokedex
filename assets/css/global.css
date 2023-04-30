@@ -15,6 +15,7 @@ body{
   background-color: #444;
   height: fit-content;
   min-height: 100vh;
+  position: relative;
 }
 
 @media screen and (min-width: 992px){
@@ -24,7 +25,7 @@ body{
   }
 }
 
-.content h1{
+.content .page-title{
   padding-left: 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
@@ -67,4 +68,23 @@ body{
   cursor: pointer;
 }
 
+#link-back{
+  color:#cc0000;
+  position: absolute; 
+  top: 1.5rem;
+  left: 1.5rem;
+}
+#link-back a img{
+  fill: white;
+  width: 2rem;
+  height: 2rem;
+  font-size: 16px;
+}
 
+#link-back:visited{
+  color: #770000;
+}
+
+#link-back:hover{
+  color: #770000;
+}
