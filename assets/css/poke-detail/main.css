@@ -34,24 +34,43 @@
   }
 
 .poke-details__division-container{
-  
-  
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
   max-width: 100vw;
+  flex-flow: column nowrap;
+  width: 100%;
+  padding: 0rem;
 }
 
 .poke-details__division-title-text{
   padding-bottom: 0.45rem;
   border-bottom: 1px solid #ccc;
   text-align: center;
-  width: 300px;
+  width: 400px;
+  max-width: 100%;
   margin: 0;
-  color: #525252;
-  font-size: 1.6rem;
+  color: #eee;
+  font-size: 1.4rem;
 }
 
 .principal-info__container{
   display: flex;
   align-items: center;
   flex-direction: column;
+  
+}
+
+#atributos{
+  width: 100%;
+  display: grid;
+  max-width: 400px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.pokemon_details_atribute-item{
+  margin-bottom: 1.25rem;
 }

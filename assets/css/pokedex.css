@@ -27,6 +27,7 @@
 .pokemon-list__item{
   max-width: 100%;
   margin: .5rem;
+  background-color: aliceblue;
   padding-top: 6rem 0;
   border-radius: 0.5rem; 
   flex-direction: column; 
