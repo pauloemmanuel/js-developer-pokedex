@@ -36,9 +36,11 @@
       <!--Informações principais-->
       <section class="principal-info__container">
         <h1 class="poke-details__title">Detalhes do Pokemon</h1>
-        <div class="c-loader" style="width:80px;height: 80px;" id="image-loader"></div>
+        <div class="c-loader" style="width:125px;height: 125px;" id="image-loader"></div>
         <img id='poke-image' style="display:none" alt="pokemon-principal-image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"/>
-        <h1 class="poke-details__title">Bulbassauro</h1>
+        <h1 id="nome-pokemon" class="poke-details__title"><div class="c-loader"></div></h1>
+        <ol id='tipos-pokemon' class="pokemon-list__types">
+        </ol>
       </section>
       <!--Informações Gerais-->
       <section class="poke-details__division-container">

@@ -1,4 +1,4 @@
-import { pegaPokemonComDetalhes } from './poke-api.js';
+import { pegaPokemonComDetalhes, takeTypesToHtml } from './poke-api.js';
 import {Pokemon as PokemonModel} from './Models/pokemon-model.js';
 console.log('Script funciona!')
 
@@ -28,6 +28,7 @@ function retornaUrlPokemonEspecifico(){
 }
 
 async function setaDadosPokemonNaTela(pokemon){
+    setarInformacoesPrincipais(pokemon);
     setarImagem(pokemon.photo);
     await sleep(500)
     setarInformacoesBasicas(pokemon);
@@ -58,13 +59,21 @@ function setarImagem(href_imagem){
     const loader = document.querySelector('#image-loader');
     const imagemPokemon = document.querySelector('#poke-image')
     
-    imagemPokemon.href = href_imagem;
+    imagemPokemon.src = href_imagem;
 
     loader.style.display = 'none';
     imagemPokemon.style.display = 'block';
 }
 
+function setarInformacoesPrincipais(pokemon){
+    const nome_pokemon = document.querySelector('#nome-pokemon') 
+    nome_pokemon.innerHTML = pokemon.name; 
+    const tipos_pokemon = document.querySelector('#tipos-pokemon')
+    tipos_pokemon.innerHTML = takeTypesToHtml(pokemon.types)
+}
+
 function sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
+
 

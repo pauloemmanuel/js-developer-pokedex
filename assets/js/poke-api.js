@@ -22,7 +22,7 @@ const typesColorIndex = {
   fairy: '#f9aec7' 
 }
 
-function takeTypesToHtml(tipos){
+export function takeTypesToHtml(tipos){
 
   return tipos.map(tipo => `<li class="pokemon-list__types--item pokemon-type-${tipo}">${tipo}</li>`).join('')
 
